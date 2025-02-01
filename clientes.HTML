@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Arrow - Clientes</title>
+    <link rel="stylesheet" href="./BUILD/STYLES.CSS">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto&display=swap');
+        
+        /* Estilos para el formulario de edición */
+        #edit-client-form {
+            display: none;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        #edit-client-form h3 {
+            margin-top: 0;
+        }
+        #edit-client-form input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+        }
+        #edit-client-form button {
+            margin-top: 10px;
+            padding: 8px;
+            cursor: pointer;
+        }
+        .btn-cancel {
+            background-color: red;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Coffee Shop ARROW</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="clientes.html">Clientes</a></li>
+                    <li><a href="pedidos.html">Pedidos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="clientes" class="clientes container">
+        <h2>Lista de Clientes</h2>
+        
+        <!-- Formulario para agregar cliente -->
+        <h3>Añadir Cliente</h3>
+        <form id="add-client-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" required>
+
+            <button type="submit">Agregar Cliente</button>
+        </form>
+
+        <h3>Clientes Registrados</h3>
+        <div class="menu-items" id="cliente-lista">
+            <!-- Los clientes se mostrarán aquí -->
+        </div>
+    </section>
+
+    <!-- Formulario para editar clientes -->
+    <div id="edit-client-form">
+        <h3>Editar Cliente</h3>
+        <form id="edit-client">
+            <label for="edit-nombre">Nombre:</label>
+            <input type="text" id="edit-nombre" name="edit-nombre" required>
+
+            <label for="edit-telefono">Teléfono:</label>
+            <input type="text" id="edit-telefono" name="edit-telefono" required>
+
+            <button type="submit">Actualizar Cliente</button>
+            <button type="button" class="btn-cancel" id="cancel-edit">Cancelar</button>
+        </form>
+    </div>
+
+    <footer id="contacto">
+        <p>Contacto: info@CAFEARROW.com | Tel: 9760-456-789</p>
+        <p>© Coffee Shop ARROW. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./JS/clientes.js"></script> <!-- Enlazar el archivo JS -->
+</body>
+</html>

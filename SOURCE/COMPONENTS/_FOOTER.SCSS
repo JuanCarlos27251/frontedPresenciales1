@@ -1,0 +1,25 @@
+@use '../BASE/_VARIABLES' as *;
+
+footer {
+    background: $primary-color;
+    color: $black; // Cambiado de $text-color a $black
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-family: $primary-family;
+
+    p {
+        color: $black; // Cambiado de $text-color a $black
+        margin: 0;
+    }
+
+    a {
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            color: $secondary-color;
+            text-decoration: underline;
+        }
+    }
+}

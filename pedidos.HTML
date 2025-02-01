@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffe Shop Arrow - Pedidos</title>
+    <link rel="stylesheet" href="./BUILD/STYLES.CSS">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Coffe Shop ARROW</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.HTML">Inicio</a></li>
+                    <li><a href="productos.HTML">Productos</a></li>
+                    <li><a href="clientes.HTML">Clientes</a></li>
+                    <li><a href="pedidos.HTML">Pedidos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="visual">
+        <div class="visual-content">
+            <h2>Bienvenidos a Cafetería Delicia</h2>
+            <video autoplay muted loop id="video-bg">
+                <source src="./SOURCE/ArrowVideo.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+            <p>Disfruta de los mejores cafés y pasteles en un ambiente acogedor.</p>
+            <a href="#menu" class="btn">Ver Menú</a>
+        </div>
+    </section>
+
+    <section id="pedidos" class="pedidos container">
+        <h2>Pedidos Realizados</h2>
+        <div id="pedidos-lista"></div>
+
+        <!-- Formulario para agregar un nuevo pedido -->
+        <h3>Añadir Nuevo Pedido</h3>
+        <form id="add-pedido-form">
+            <label for="pedido-nombre">Nombre del Producto:</label>
+            <input type="text" id="pedido-nombre" name="pedido-nombre" required>
+
+            <label for="pedido-precio">Precio:</label>
+            <input type="number" step="0.01" id="pedido-precio" name="pedido-precio" required>
+
+            <button type="submit">Añadir Pedido</button>
+        </form>
+
+        <!-- Formulario de edición de pedido (inicialmente oculto) -->
+        <h3>Editar Pedido</h3>
+        <form id="edit-pedido-form" style="display:none;">
+            <label for="edit-pedido-nombre">Nombre:</label>
+            <input type="text" id="edit-pedido-nombre" required>
+
+            <label for="edit-pedido-precio">Precio:</label>
+            <input type="number" step="0.01" id="edit-pedido-precio" required>
+
+            <button type="submit">Actualizar Pedido</button>
+        </form>
+    </section>
+
+    <footer id="contacto">
+        <p>Contacto: info@CAFEARROW.com | Tel: 9760-456-789</p>
+        <p>© Coffe Shop ARROW. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./JS/registropedido.js"></script>
+</body>
+</html>

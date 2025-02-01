@@ -1,0 +1,44 @@
+@use '../BASE/_VARIABLES' as *;
+@use '../COMPONENTS/_MIXINS' as *;
+
+.menu {
+    font-family: $primary-family;
+    color: $black; // Cambiado de $text-color a $black
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+
+    h2 {
+        color: $white;
+        margin-bottom: 1rem;
+    }
+
+    .menu-items {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .menu-item {
+            background: $background-color;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 5px;
+            width: 100%;
+            @include box-shadow;
+         // Mueve el mixin aquí
+
+            @media (min-width: 768px) {
+                width: 30%;
+            }
+
+            h3 {
+                margin-bottom: 10px;
+            }
+
+            .price {
+                font-weight: bold;
+                color: $primary-color;
+            }
+        }
+    }
+}

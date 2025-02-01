@@ -1,0 +1,12 @@
+@mixin box-shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@mixin button($bg-color, $text-color) {
+    background: $bg-color;
+    color: $text-color;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}

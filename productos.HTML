@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffe Shop Arrow - Productos</title>
+    <link rel="stylesheet" href="./BUILD/STYLES.CSS">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Coffe Shop ARROW</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.HTML">Inicio</a></li>
+                    <li><a href="productos.HTML">Productos</a></li>
+                    <li><a href="clientes.HTML">Clientes</a></li>
+                    <li><a href="pedidos.HTML">Pedidos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="visual">
+        <div class="visual-content">
+            <h2>Bienvenidos a Cafetería Delicia</h2>
+            <video autoplay muted loop id="video-bg">
+                <source src="./SOURCE/ArrowVideo.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+            <p>Disfruta de los mejores cafés y pasteles en un ambiente acogedor.</p>
+            <a href="#menu" class="btn">Ver Menú</a>
+        </div>
+    </section>
+
+    <section id="productos" class="productos container">
+        <h2>Productos</h2>
+
+        <!-- Comidas -->
+        <h3>Comidas</h3>
+        <div id="comidas-lista" class="menu-items"></div>
+
+        <!-- Bebidas -->
+        <h3>Bebidas</h3>
+        <div id="bebidas-lista" class="menu-items"></div>
+
+        <!-- Formulario para agregar nueva comida -->
+        <h3>Añadir Nueva Comida</h3>
+        <form id="add-comida-form">
+            <label for="nombre-comida">Nombre:</label>
+            <input type="text" id="nombre-comida" name="nombre-comida" required>
+
+            <label for="precio-comida">Precio:</label>
+            <input type="number" step="0.01" id="precio-comida" name="precio-comida" required>
+
+            <label for="ingredientes">Ingredientes:</label>
+            <input type="text" id="ingredientes" name="ingredientes" required>
+
+            <label for="con-gluten">¿Contiene Gluten?</label>
+            <select id="con-gluten" name="con-gluten">
+                <option value="true">Sí</option>
+                <option value="false">No</option>
+            </select>
+
+            <button type="submit">Añadir Comida</button>
+        </form>
+
+        <!-- Formulario para agregar nueva bebida -->
+        <h3>Añadir Nueva Bebida</h3>
+        <form id="add-bebida-form">
+            <label for="nombre-bebida">Nombre:</label>
+            <input type="text" id="nombre-bebida" name="nombre-bebida" required>
+
+            <label for="precio-bebida">Precio:</label>
+            <input type="number" step="0.01" id="precio-bebida" name="precio-bebida" required>
+
+            <label for="descafeinado">¿Es Descafeinado?</label>
+            <select id="descafeinado" name="descafeinado">
+                <option value="true">Sí</option>
+                <option value="false">No</option>
+            </select>
+
+            <button type="submit">Añadir Bebida</button>
+        </form>
+
+    </section>
+
+    <footer id="contacto">
+        <p>Contacto: info@CAFEARROW.com | Tel: 9760-456-789</p>
+        <p>© Coffe Shop ARROW. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./JS/productos.js"></script>
+</body>
+</html>
