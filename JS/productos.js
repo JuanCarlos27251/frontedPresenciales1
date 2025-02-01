@@ -61,13 +61,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function eliminarProducto(tipo, id) {
-        fetch(`https://localhost:7186/api/${tipo}/${id}`, {
+        let endpoint = tipo === 'bebida' ? 'bebidas' : 'comida'; // Asegura el endpoint correcto
+    
+        fetch(`https://localhost:7186/api/${endpoint}/${id}`, {
             method: 'DELETE',
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Error eliminando ${tipo}: ${response.statusText}`);
+            }
+            return response;
         })
         .then(() => {
             loadComidas();
             loadBebidas();
-        });
+        })
+        .catch(error => console.error('Error eliminando producto:', error));
     }
 
     // Agregar comida
